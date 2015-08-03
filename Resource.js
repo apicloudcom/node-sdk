@@ -85,7 +85,7 @@ Resource.prototype.upload = function (modelName,isFilter, item, params, callback
     var isPut=(!params["_relation"])&&params["_id"];
     var fileUrl = this.baseurl + url + ( isPut ? ("/" + params["_id"]) : "");
     var filename = filepath.substr(filepath.lastIndexOf("/") + 1, filepath.length);
-    if(!values["filename"]) values[filename]=filename;
+    if(!values["filename"]) values["filename"]=filename;
     values["file"]=fs.createReadStream(filepath);
     var ajaxConfig={
         url: fileUrl,
@@ -162,7 +162,7 @@ Resource.prototype.Factory = function (modelName) {
                             isFilter = false;
                         }
                         fileCount++;
-                        self.upload(modelName,isFilter, item, params, function (err, returnData) {
+                        self.upload(modelName,isFilter, item, modelName == "file"?params||{}, function (err, returnData) {
                             if (err) {
                                 return callback(null, err);
                             } else {
