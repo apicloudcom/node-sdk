@@ -9,12 +9,16 @@ APICloud的 NODE SDK 是基于request构建. 它与APICloud开发的api进行交
 
 首先需要引入模块,需要使用那部分就引用各自的模块。
 
+```js
+需要把整个项目下载完成后复制到node_modules文件夹下，然后修改文件夹名称为APICloud
+```
+
 如果把相关代码添加到项目中，则直接引入即可。
 
 ```js
-var Resource=require("./APICloud").Resource;
-var Push=require("./APICloud").Push;
-var Analytics=require("./APICloud").Analytics;
+var Resource=require("APICloud").Resource;
+var Push=require("APICloud").Push;
+var Analytics=require("APICloud").Analytics;
 ```
 
 如果想要按照模块的方式使用，只需要把项目拷贝到node_modules里边即可，如修改文件夹名为APICloud
