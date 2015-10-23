@@ -1,0 +1,23 @@
+{
+  "name": "apicloud",
+  "version": "1.0.1",
+  "description": "APICloud SDK",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apicloudcom/node-sdk"
+  },
+  "keywords": [
+    "APICloud"
+  ],
+  "author": "zx377359832@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apicloudcom/node-sdk/issues"
+  },
+  "homepage": "https://github.com/apicloudcom/node-sdk",
+  "dependencies": {
+    "async":"1.0.0",
+    "request":"2.55.0"
+  }
+}
