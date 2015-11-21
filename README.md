@@ -9,8 +9,12 @@ APICloud的 NODE SDK 是基于request构建. 它与APICloud开发的api进行交
 
 首先需要引入模块,需要使用那部分就引用各自的模块。
 
+
+模块未提交NPM,所以不能通过npm进行安装。    
+需要把整个项目下载完成后复制到node_modules文件夹下，然后修改文件夹名称为APICloud    
+如果运行不起要注意看node的控制台，因为Resource.js有一段代码
 ```js
-模块未提交NPM,所以不能通过npm进行安装。需要把整个项目下载完成后复制到node_modules文件夹下，然后修改文件夹名称为APICloud
+var request = require('request'); //如果node环境没有依赖包，需要自己安装 npm install request
 ```
 
 如果把相关代码添加到项目中，则直接引入即可。
